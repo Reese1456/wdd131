@@ -1,0 +1,28 @@
+@media screen and (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #menuButton {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        margin-top: 0;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+}
