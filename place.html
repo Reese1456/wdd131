@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A profile page for South Africa, featuring key data, weather, and information about the country.">
+    <meta name="author" content="Reese Blignaut">
+    <title>South Africa: Country Profile & Information</title>
+
+    <link rel="stylesheet" href="./styles/place.css">
+    <link rel="stylesheet" href="./styles/place-large.css">
+    <script src="./scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <main>
+        <header class="site-header">
+            <h1>South Africa</h1>
+        </header>
+
+        <section class="hero">
+
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 600px)">
+                <source srcset="images/hero-large.webp" media="(max-width: 1000px)">
+                <img src="images/hero-large.webp" alt="South Africa">
+            </picture>
+
+            <div class="overlay data-card">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 1,221,037 sq km</li>
+                    <li><strong>Population:</strong> 60,414,495</li>
+                    <li><strong>Capital:</strong> Pretoria (Exec), Cape Town (Leg), Bloemfontein (Jud)</li>
+                    <li><strong>Languages:</strong> 11 official languages</li>
+                    <li><strong>Currency:</strong> South African Rand (ZAR)</li>
+                    <li><strong>Time Zone:</strong> UTC+2</li>
+                    <li><strong>Calling Code:</strong> +27</li>
+                    <li><strong>Internet TLD:</strong> .za</li>
+                </ul>
+            </div>
+
+            <div class="overlay weather-card">
+                <h2 class="weather-heading">
+                    Weather
+                    <img class="mobile-weather-icon" src="images/sun.svg" alt="Sunny weather icon" width="32"
+                        height="32">
+                </h2>
+                <p><strong>Temperature:</strong> <span id="temp">18</span>°C</p>
+                <p><strong>Conditions:</strong> Sunny</p>
+                <p><strong>Wind:</strong> <span id="speed">10</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span>°C</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Reese Blignaut | South Africa <span id="year"></span> | Last Modified: <span id="lastModified"></span>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

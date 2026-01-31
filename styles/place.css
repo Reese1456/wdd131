@@ -1,0 +1,99 @@
+/* place.css */
+:root {
+    --green: #007A4D;
+    --red: #582a29;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.site-header {
+    background: var(--red);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 70vh;
+    object-fit: cover;
+}
+
+/* Cards for mobile - stacked layout */
+.overlay {
+    background: white;
+    margin: 1.5rem auto;
+    padding: 1.25rem;
+    border-radius: 10px;
+    max-width: 500px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.overlay h2 {
+    background: var(--green);
+    color: white;
+    padding: 0.75rem;
+    margin: -1.25rem -1.25rem 1rem -1.25rem;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.overlay ul {
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+.overlay p {
+    text-align: left;
+    margin: 0.75rem 0;
+}
+
+footer {
+    background: var(--red);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+.weather-heading {
+    display: flex;             
+    align-items: center;        
+    justify-content: center;    
+    gap: 10px;                  
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.mobile-weather-icon {
+    width: 32px;
+    height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+}

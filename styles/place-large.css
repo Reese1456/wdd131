@@ -1,0 +1,43 @@
+@media (min-width: 1000px) {
+    .hero {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        width: 300px;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        text-align: left;
+        padding: 1rem 1.2rem;
+        border-radius: 8px;
+        margin: 0; 
+    }
+
+    .data-card {
+        top: 8%;
+        left: 5%;
+    }
+
+    .weather-card {
+        bottom: 10%;
+        right: 5%;
+    }
+
+    .overlay h2 {
+        text-align: left;
+    }
+
+    .weather-card .mobile-weather-icon {
+        display: none !important;
+    }
+    
+    .weather-heading::after {
+        display: inline; 
+        content: " ☀️";
+        margin-left: 8px;
+    }
+}
+
+
+
