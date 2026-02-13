@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Your Submission</title>
+    <link rel="stylesheet" href="styles/review.css">
+    <script src="scripts/review.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Submission Confirmation</h1>
+    </header>
+
+    <main>
+        <div class="review-card">
+            <h2>Does this look correct?</h2>
+            <hr>
+            
+            <p><strong>Product:</strong> <span id="displayProduct"></span></p>
+            <p><strong>Rating:</strong> <span id="displayRating"></span> Stars</p>
+            <p><strong>Installed On:</strong> <span id="displayDate"></span></p>
+            <p><strong>Useful Features:</strong> <span id="displayFeatures"></span></p>
+            <p><strong>Your Review:</strong></p>
+            <blockquote id="displayReview"></blockquote>
+            
+            <p><strong>Submitted by:</strong> <span id="displayUser"></span></p>
+
+            <div class="actions">
+                <button onclick="window.print()" class="btn-submit">Print This Page</button>
+                <a href="form.html" class="btn-secondary">Back to Form</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> Reese Blignaut – South Africa, Gauteng.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    background-color: #f4f7f6;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+}
+
+form {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    padding: 0; 
+}
+
+.form-group-highlight {
+    background-color: #f8fafc; 
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    border-left: 4px solid #94a3b8; 
+}
+
+.form-group:not(.form-group-highlight) label {
+    margin-left: 0.2rem;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-weight: bold;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block; 
+    font-weight: normal;   
+    margin-left: 0.5rem;   
+    margin-bottom: 0.5rem; 
+    vertical-align: middle; 
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.star-rating {
+    border: none;
+    padding: 0;
+}
+
+.star-rating input[type="radio"] {
+    display: none; 
+}
+
+.star-rating label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #f5b301; 
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+footer {
+    margin-top: 3rem;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
