@@ -63,11 +63,6 @@ textarea {
     box-sizing: border-box;
 }
 
-.star-rating {
-    border: none;
-    padding: 0;
-}
-
 .star-rating input[type="radio"] {
     display: none; 
 }
