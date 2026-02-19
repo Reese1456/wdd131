@@ -1,0 +1,985 @@
+:root {
+    --primary-color: #1f2a44;   /* Deep strategy blue */
+    --secondary-color: #c2a83e; /* Tactical gold */
+    --light-color: #f4f6f8;
+    --text-dark: #222;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 16px; /* Base for mobile readability */
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────── */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1rem;
+    gap: 1rem;
+}
+
+/* Brand / Logo */
+.header-brand {
+    flex-shrink: 0;
+}
+
+.brand-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    line-height: 1.2;
+}
+
+.brand-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.brand-tagline {
+    font-size: 0.68rem;
+    color: var(--secondary-color);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+/* ─── Hamburger Button ───────────────────────────────────────────────────── */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    flex-shrink: 0;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animated X when open */
+.hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ─── Mobile Nav ─────────────────────────────────────────────────────────── */
+#main-nav {
+    display: none;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+#main-nav.is-open {
+    display: block;
+}
+
+/* Wrap inner + nav in a column on mobile */
+header {
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.65rem 1rem;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    transition: background 0.2s, color 0.2s;
+    font-size: 0.95rem;
+}
+
+nav ul li:last-child a {
+    border-bottom: none;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background: rgba(255,255,255,0.08);
+    color: var(--secondary-color);
+}
+
+/* Position nav below the inner bar on mobile */
+.header-inner {
+    flex-wrap: wrap;
+}
+
+#main-nav {
+    flex-basis: 100%;
+}
+
+/* Main Content - Single column by default */
+main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background: var(--white);
+    border-left: 5px solid var(--secondary-color);
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 0 8px 8px 0;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.accent {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically on mobile */
+    gap: 1rem;
+}
+
+.card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    min-height: 120px; /* Consistent placeholder */
+    background: #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Buttons/Links */
+a.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+a.button:hover {
+    background: #a88d34;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────────────── */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin-top: 2rem;
+}
+
+/* Three-column main area — stacked on mobile */
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-heading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* About column */
+.footer-about p {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    opacity: 0.75;
+    margin-bottom: 0.4rem;
+}
+
+.footer-version {
+    font-size: 0.75rem !important;
+    opacity: 0.45 !important;
+    margin-top: 0.75rem !important;
+}
+
+/* Social icons column */
+.footer-social {
+    text-align: left;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+
+.social-icon img {
+    width: 22px;
+    height: 22px;
+    /* Make white SVGs visible on dark background */
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.social-icon:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.social-icon:hover img {
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+
+/* Quick links column */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer-links ul li a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s, padding-left 0.2s;
+    display: inline-block;
+}
+
+.footer-links ul li a:hover {
+    color: var(--secondary-color);
+    padding-left: 4px;
+}
+
+/* Copyright bar */
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 1.5rem;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    opacity: 0.55;
+    margin: 0.15rem 0;
+}
+
+.footer-modified {
+    font-size: 0.72rem !important;
+    opacity: 0.35 !important;
+}
+
+/* Small screen tweaks */
+@media (max-width: 480px) {
+    main {
+        padding: 0.5rem;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.3rem;
+    }
+}
+/* Video embed - responsive 16:9 */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ─── Info Strip ─────────────────────────────────────────────────────────── */
+.info-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+}
+
+.info-item {
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    flex: 1 1 140px;
+}
+
+.info-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+}
+
+.info-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+
+/* ─── Rules Quick Nav ────────────────────────────────────────────────────── */
+.rules-nav-section {
+    background: var(--primary-color) !important;
+    border-left-color: var(--secondary-color);
+}
+
+.rules-nav-section h2,
+.rules-nav-section p {
+    color: var(--white);
+}
+
+.rules-quicknav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.rules-quicknav a {
+    color: var(--white);
+    text-decoration: none;
+    background: rgba(255,255,255,0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(194,168,62,0.3);
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.rules-quicknav a:hover {
+    background: rgba(194,168,62,0.2);
+    border-color: var(--secondary-color);
+}
+
+/* ─── Rules Two-Col ──────────────────────────────────────────────────────── */
+.rules-two-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* ─── Phase Blocks ───────────────────────────────────────────────────────── */
+.phase-block {
+    border-left: 5px solid var(--secondary-color);
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    background: var(--light-color);
+    border-radius: 0 6px 6px 0;
+    position: relative;
+}
+
+.phase-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.phase-block h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.phase-tag {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.phase-1 { border-left-color: #c2a83e; }
+.phase-2 { border-left-color: #c05a3a; }
+.phase-3 { border-left-color: #3a8fc0; }
+
+/* ─── Rules Lists ────────────────────────────────────────────────────────── */
+.rules-list {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+    line-height: 1.9;
+}
+
+.rules-list li {
+    margin-bottom: 0.25rem;
+}
+
+.rules-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.rules-bullets li {
+    padding: 0.3rem 0 0.3rem 1.2rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.rules-bullets li::before {
+    content: "›";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* ─── Victory Block ──────────────────────────────────────────────────────── */
+.victory-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.victory-primary {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.victory-primary h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.victory-secondary {
+    background: var(--light-color);
+    padding: 1.25rem;
+    border-radius: 6px;
+    border-left: 5px solid #3a8fc0;
+}
+
+.victory-secondary h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.expansion-note {
+    background: rgba(194,168,62,0.08);
+    border: 1px dashed var(--secondary-color);
+    border-radius: 4px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    opacity: 0.85;
+}
+
+/* ─── Unit Cards ─────────────────────────────────────────────────────────── */
+.unit-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.unit-card {
+    background: var(--light-color);
+    border-radius: 6px;
+    padding: 0;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.unit-card.heavy {
+    border-left-color: #c05a3a;
+}
+
+.unit-card.tba {
+    border-left-color: #888;
+    opacity: 0.5;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tba-inner {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    color: #888;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.unit-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.unit-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.unit-category-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.unit-flavour {
+    font-size: 0.85rem;
+    opacity: 0.65;
+    font-style: italic;
+    margin-bottom: 0.85rem;
+    line-height: 1.5;
+}
+
+.unit-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+}
+
+.stat-badge {
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 4px;
+    padding: 0.35rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 54px;
+    gap: 0.1rem;
+}
+
+.stat-label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    opacity: 0.6;
+}
+
+.stat-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+.unit-special {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.special-tag {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--white);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    margin-bottom: 0.35rem;
+}
+
+.special-tag.no-special {
+    background: #ccc;
+    color: #666;
+}
+
+.special-desc {
+    font-size: 0.82rem;
+    opacity: 0.75;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ─── Building Cards ─────────────────────────────────────────────────────── */
+.buildings-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/*.building-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--light-color);
+    border-radius: 6px;
+    padding: 0;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    overflow: hidden;
+}*/
+
+.building-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--light-color);
+    border-radius: 6px;
+    padding: 0;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    overflow: hidden;
+}
+
+.building-icon-block {
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.building-info {
+    flex: 1;
+    min-width: 0;
+    padding: 1rem;
+}
+
+.building-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    margin: 0 0 0.35rem;
+}
+
+.building-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.4rem;
+}
+
+.building-cost,
+.building-hp {
+    font-size: 0.78rem;
+    font-weight: 500;
+    opacity: 0.75;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+}
+
+.building-hp {
+    color: #ff8080;
+}
+
+.building-functions {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin: 0 0 0.3rem;
+}
+
+.building-special {
+    font-size: 0.82rem;
+    color: #c05a3a;
+    margin: 0.3rem 0 0;
+    line-height: 1.5;
+}
+
+/* ─── Build Order ────────────────────────────────────────────────────────── */
+.build-order {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1rem;
+}
+
+.build-step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.build-step:last-child {
+    border-bottom: none;
+}
+
+.build-step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.build-step-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.build-step-info strong {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+}
+
+.build-step-info span {
+    font-size: 0.82rem;
+    opacity: 0.65;
+}
+
+/* ─── JS Fallback ────────────────────────────────────────────────────────── */
+.js-fallback {
+    opacity: 0.5;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* ─── Video Container ────────────────────────────────────────────────────── */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+}
+
+/* ─── Unit Card Images ───────────────────────────────────────────────────── */
+.unit-img-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    background: #1a2236;
+}
+
+.unit-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.unit-card:hover .unit-img {
+    transform: scale(1.04);
+}
+
+.unit-card-body {
+    padding: 1rem;
+}
+
+/* ─── Building Card Images ───────────────────────────────────────────────── */
+/*.building-img-wrap {
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #1a2236;
+}*/
+
+.building-img-wrap {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #1a2236;
+}
+
+.building-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.building-card:hover .building-img {
+    transform: scale(1.06);
+}
+
+/* ─── Faction Flags (index.html) ─────────────────────────────────────────── */
+.faction-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.25rem 0;
+    justify-content: center;
+}
+
+.faction-flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1 1 120px;
+    max-width: 160px;
+}
+
+.faction-flag img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+    border: 2px solid rgba(194,168,62,0.3);
+    display: block;
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.faction-flag img:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.faction-flag span {
+    font-size: 0.72rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--text-dark);
+    opacity: 0.8;
+    line-height: 1.3;
+}

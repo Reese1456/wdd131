@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Reese Blignaut">
+    <meta name="description"
+        content="TableTop Command is an RTS-inspired tactical board game for 2 players. Build bases, gather resources, and destroy the enemy Headquarters.">
+    <meta name="keywords" content="tabletop game, board game, RTS, strategy game, miniatures, wargame">
+    <title>TableTop Command - Rules</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/tabletopcommand.css">
+    <link rel="stylesheet" href="styles/tabletopcommand-large.css">
+</head>
+
+<body>
+    <header id="top">
+        <div class="header-inner">
+            <div class="header-brand">
+                <a href="index.html" class="brand-link">
+                    <span class="brand-name">TableTop Command</span>
+                    <span class="brand-tagline">RTS on Your Tabletop</span>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="units.html">Units</a></li>
+                    <li><a href="buildings.html">Buildings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Quick Nav -->
+        <section class="rules-nav-section">
+            <h2>Rulebook v1.1</h2>
+            <p>Jump to a section:</p>
+            <nav class="rules-quicknav">
+                <a href="#overview">Overview</a>
+                <a href="#components">Components</a>
+                <a href="#setup">Setup</a>
+                <a href="#round-structure">Round Structure</a>
+                <a href="#workers">Workers</a>
+                <a href="#combat">Combat</a>
+                <a href="#research">Research</a>
+                <a href="#victory">Victory</a>
+            </nav>
+        </section>
+
+        <!-- 1. Overview -->
+        <section id="overview">
+            <h2>1. Game Overview</h2>
+            <p>
+                <span class="accent">TableTop Command</span> is a tactical strategy game for <strong>2 players</strong>
+                that recreates the feel of a real-time strategy video game in turn-based tabletop form. Players build
+                bases, gather resources, research technology, and command armies to destroy the enemy Headquarters.
+            </p>
+            <div class="info-strip">
+                <div class="info-item"><span class="info-label">Players</span><span class="info-value">2</span></div>
+                <div class="info-item"><span class="info-label">Game Length</span><span class="info-value">60&ndash;90
+                        min</span></div>
+                <div class="info-item"><span class="info-label">Victory</span><span class="info-value">Destroy Enemy
+                        HQ</span></div>
+                <div class="info-item"><span class="info-label">Version</span><span class="info-value">1.1</span></div>
+            </div>
+        </section>
+
+        <!-- 2. Components -->
+        <section id="components">
+            <h2>2. Components</h2>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="card">
+                    <h3>Resources</h3>
+                    <p>Ore Tokens &times; 30<br>Energy Tokens &times; 20<br>Knowledge Tokens &times; 6</p>
+                </div>
+                <div class="card">
+                    <h3>Markers</h3>
+                    <p>Damage Tokens<br>Initiative Marker</p>
+                </div>
+                <div class="card">
+                    <h3>Per Player</h3>
+                    <p>Workers &times; 6&ndash;10<br>Buildings (see <a href="buildings.html">Buildings</a>)<br>Units
+                        (see <a href="units.html">Units</a>)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Setup -->
+        <section id="setup">
+            <h2>3. Game Setup</h2>
+            <div class="rules-two-col">
+                <div>
+                    <h3>Map Setup</h3>
+                    <ol class="rules-list">
+                        <li>Place both HQs <strong>24&quot;</strong> apart.</li>
+                        <li>Place <strong>2 Ore nodes</strong> within 6&quot; of each HQ.</li>
+                        <li>Place <strong>1&ndash;2 neutral Ore nodes</strong> in the center of the map.</li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>Player Setup <em>(each player)</em></h3>
+                    <ol class="rules-list">
+                        <li>Place your <strong>HQ</strong> on the board.</li>
+                        <li>Place <strong>1 Generator</strong> within 6&quot; of your HQ.</li>
+                        <li>Place <strong>2 Workers</strong>.</li>
+                        <li>Take <strong>6 Ore</strong> and <strong>2 Energy</strong> as starting resources.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Round Structure -->
+        <section id="round-structure">
+            <h2>4. Round Structure</h2>
+            <p>Each round is divided into <strong>3 phases</strong>, played in order.</p>
+
+            <div class="phase-block phase-1">
+                <div class="phase-label">Phase 1</div>
+                <h3>Strategic Phase <span class="phase-tag">Simultaneous</span></h3>
+                <ol class="rules-list">
+                    <li><strong>Income:</strong> Collect +1 Energy per Generator; +1 Ore per worker at a Mine; +1
+                        Knowledge per worker at a Research Center.</li>
+                    <li><strong>Retrieve Workers:</strong> Pick up all your Workers from the board.</li>
+                    <li><strong>Secret Planning:</strong> Secretly assign Workers to actions face-down.</li>
+                    <li><strong>Reveal &amp; Resolve:</strong> Both players reveal and resolve all Worker assignments
+                        simultaneously.</li>
+                </ol>
+            </div>
+
+            <div class="phase-block phase-2">
+                <div class="phase-label">Phase 2</div>
+                <h3>Combat Phase <span class="phase-tag">Sequential</span></h3>
+                <ol class="rules-list">
+                    <li><strong>Initiative:</strong> Both players roll off. Winner chooses to act first or second.</li>
+                    <li><strong>Player 1&rsquo;s Turn:</strong> Move all units, then attack with all units.</li>
+                    <li><strong>Player 2&rsquo;s Turn:</strong> Move all units, then attack with all units.</li>
+                </ol>
+            </div>
+
+            <div class="phase-block phase-3">
+                <div class="phase-label">Phase 3</div>
+                <h3>End Phase</h3>
+                <ol class="rules-list">
+                    <li>Check victory conditions.</li>
+                    <li>If no winner, begin a new round from Phase 1.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 5. Workers -->
+        <section id="workers">
+            <h2>5. Worker System</h2>
+            <p>Workers are your most important off-battlefield asset. Each round they are secretly assigned to one
+                action, then revealed.</p>
+
+            <h3 style="margin: 1.5rem 0 0.5rem;">Worker Actions</h3>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="card">
+                    <h3>Mine</h3>
+                    <p>Send a worker to a Mine building. Gain <strong>+1 Ore</strong> this round (stacks with
+                        Mine&rsquo;s base income).</p>
+                </div>
+                <div class="card">
+                    <h3>Build</h3>
+                    <p>Place a new building adjacent within <strong>6&quot;</strong> of an existing friendly building.
+                        That building is <em>inactive</em> until the start of your next turn.</p>
+                </div>
+                <div class="card">
+                    <h3>Produce</h3>
+                    <p>At a Barracks or Factory, spend resources to create a unit. <strong>Units produced can act
+                            immediately</strong> this round.</p>
+                </div>
+                <div class="card">
+                    <h3>Repair</h3>
+                    <p>Place the worker adjacent to a damaged friendly building. Remove <strong>1 damage token</strong>
+                        from that building.</p>
+                </div>
+                <div class="card">
+                    <h3>Research</h3>
+                    <p>Place the worker at a Research Center to gain <strong>+1 Knowledge</strong> this turn.</p>
+                </div>
+            </div>
+
+            <h3 style="margin: 1.5rem 0 0.5rem;">Worker Rules</h3>
+            <ul class="rules-bullets">
+                <li>Workers remain on the board after assignment and are <strong>vulnerable</strong> to attack until
+                    your next Strategic Phase.</li>
+                <li>Workers inside the <strong>HQ</strong> or within <strong>3&quot; of a Turret</strong> are <span
+                        class="accent">Protected</span>.</li>
+                <li>Protected Workers <strong>cannot be targeted</strong> unless all buildings providing that protection
+                    are first destroyed.</li>
+            </ul>
+        </section>
+
+        <!-- 6. Combat -->
+        <section id="combat">
+            <h2>6. Combat Procedure</h2>
+            <p>When a unit attacks, follow these steps in order:</p>
+            <ol class="rules-list numbered-large">
+                <li><strong>Declare Target:</strong> Choose one enemy unit or building within attack range.</li>
+                <li><strong>Roll Dice:</strong> Roll a number of dice equal to your unit&rsquo;s AD (Attack Dice). Each
+                    unit may only target <em>one</em> target per attack, even with multiple AD.</li>
+                <li><strong>Score Hits:</strong> Each die that meets or beats the unit&rsquo;s To-Hit number scores 1
+                    hit. Standard is <strong>4+</strong> unless modified.</li>
+                <li><strong>Apply Damage:</strong> Each hit deals <strong>1 damage</strong>. Place a damage token on the
+                    target.</li>
+                <li><strong>Remove Destroyed Models:</strong> When a unit or building reaches 0 HP, it is removed.</li>
+            </ol>
+
+            <h3 style="margin: 1.5rem 0 0.5rem;">Special Rules Glossary</h3>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                <div class="card">
+                    <h3>Armored</h3>
+                    <p>Attackers suffer <strong>&minus;1 to hit</strong> against this unit. (e.g. a 4+ becomes a 5+).
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Quick Attack</h3>
+                    <p>After attacking, this unit may use any <strong>remaining unused movement</strong>.</p>
+                </div>
+                <div class="card">
+                    <h3>Ignores Armored</h3>
+                    <p>This unit&rsquo;s attacks <strong>bypass the Armored</strong> special rule entirely.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Research -->
+        <section id="research">
+            <h2>7. Research &amp; Upgrades</h2>
+            <p>Assign workers to a <strong>Research Center</strong> to generate Knowledge each turn. Spend Knowledge to
+                purchase powerful upgrades. A maximum of <strong>3 active upgrades</strong> per player at any time.</p>
+
+            <h3 style="margin: 1.5rem 0 0.5rem;">Tier 1 Upgrades <em style="font-size:0.85rem; opacity:0.7;">&mdash; 2
+                    Knowledge each</em></h3>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="card">
+                    <h3>Advanced Optics</h3>
+                    <p>All your units gain <strong>+1&quot;</strong> attack range.</p>
+                </div>
+                <div class="card">
+                    <h3>Reinforced Armor</h3>
+                    <p>All your buildings gain <strong>+2 HP</strong>.</p>
+                </div>
+                <div class="card">
+                    <h3>Logistics Network</h3>
+                    <p>Gain <strong>+1 Ore</strong> at the start of each of your turns.</p>
+                </div>
+                <div class="card">
+                    <h3>Quick Reload</h3>
+                    <p>Once per turn, <strong>re-roll</strong> one combat die.</p>
+                </div>
+            </div>
+
+            <h3 style="margin: 1.5rem 0 0.5rem;">Tier 2 Upgrades <em style="font-size:0.85rem; opacity:0.7;">&mdash; 3
+                    Knowledge each &middot; Requires 2 Tier 1</em></h3>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="card">
+                    <h3>Siege Protocols</h3>
+                    <p>Your units deal <strong>+1 damage</strong> to buildings.</p>
+                </div>
+                <div class="card">
+                    <h3>Advanced Reactors</h3>
+                    <p>All your Generators produce <strong>+1 Energy</strong> per round.</p>
+                </div>
+                <div class="card">
+                    <h3>Nanite Repair</h3>
+                    <p>Repair actions fix <strong>3 damage</strong> instead of 1.</p>
+                </div>
+                <div class="card">
+                    <h3>Overdrive Systems</h3>
+                    <p>Once per round, one friendly unit attacks with <strong>+2 AD</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Victory -->
+        <section id="victory">
+            <h2>8. Victory Conditions</h2>
+            <div class="victory-block">
+                <div class="victory-primary">
+                    <h3>Primary Victory</h3>
+                    <p>Destroy the enemy&rsquo;s <span class="accent">original Headquarters</span>. The game ends
+                        immediately.</p>
+                    <p style="font-size:0.85rem; opacity:0.75; margin-top:0.5rem;">Note: Only the original HQ counts. A
+                        Forward HQ (expansion rule) does not fulfill the win condition.</p>
+                </div>
+                <div class="victory-secondary">
+                    <h3>Secondary Goals</h3>
+                    <ul class="rules-bullets">
+                        <li>Control key resource nodes</li>
+                        <li>Destroy the enemy economy</li>
+                        <li>Achieve technology superiority</li>
+                    </ul>
+                    <p style="font-size:0.85rem; opacity:0.75; margin-top:0.5rem;">Secondary goals do not win the game
+                        but put you on the path to victory.</p>
+                </div>
+            </div>
+
+            <div class="expansion-note">
+                <strong>Expansion Rules (Not yet implemented in v1.1):</strong> Outpost buildings may be placed 12&quot;
+                from your HQ and 6&quot; from enemy buildings to extend your build radius. An Outpost can be upgraded to
+                a Forward HQ (limit 1 per player).
+            </div>
+
+            <a href="units.html" class="button" style="margin-right: 1rem;">View All Units</a>
+            <a href="buildings.html" class="button">View All Buildings</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-main">
+
+            <div class="footer-about">
+                <h3 class="footer-heading">TableTop Command</h3>
+                <p>An RTS-inspired tactical board game for 2 players. Build your base, command your army, and destroy
+                    the enemy Headquarters.</p>
+                <p class="footer-version">Rulebook v1.1 &mdash; Designed by Reese Blignaut</p>
+            </div>
+
+            <div class="footer-social">
+                <h3 class="footer-heading">Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com" class="social-icon" title="Instagram" aria-label="Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="images/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com" class="social-icon" title="YouTube" aria-label="YouTube"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="images/youtube.svg" alt="YouTube">
+                    </a>
+                    <a href="https://www.facebook.com" class="social-icon" title="Facebook" aria-label="Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="images/facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rules.html">Rulebook</a></li>
+                    <li><a href="units.html">Units</a></li>
+                    <li><a href="buildings.html">Buildings</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> TableTop Command. All rights reserved. Reese Blignaut</p>
+            <p class="footer-modified">Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/tabletopcommand.js"></script>
+</body>
+
+</html>

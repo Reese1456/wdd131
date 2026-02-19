@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Reese Blignaut">
+    <meta name="description"
+        content="TableTop Command is an RTS-inspired tactical board game for 2 players. Build bases, gather resources, and destroy the enemy Headquarters.">
+    <meta name="keywords" content="tabletop game, board game, RTS, strategy game, miniatures, wargame">
+    <title>TableTop Command - Buildings</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/tabletopcommand.css">
+    <link rel="stylesheet" href="styles/tabletopcommand-large.css">
+</head>
+
+<body>
+    <header id="top">
+        <div class="header-inner">
+            <div class="header-brand">
+                <a href="index.html" class="brand-link">
+                    <span class="brand-name">TableTop Command</span>
+                    <span class="brand-tagline">RTS on Your Tabletop</span>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="units.html">Units</a></li>
+                    <li><a href="buildings.html">Buildings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Buildings</h2>
+            <p>
+                Buildings are the foundation of your war economy. Workers construct them during the <strong>Strategic
+                    Phase</strong>.
+                All new buildings are inactive the round they&rsquo;re built &mdash; they become active at the start of
+                your next turn.
+                Every building must be placed within <strong>6&quot;</strong> of an existing friendly building.
+            </p>
+            <div class="info-strip">
+                <div class="info-item"><span class="info-label">Build Range</span><span class="info-value">6&quot; from
+                        existing</span></div>
+                <div class="info-item"><span class="info-label">Activation</span><span class="info-value">Next
+                        turn</span></div>
+                <div class="info-item"><span class="info-label">Repair</span><span class="info-value">Worker removes 1
+                        HP damage</span></div>
+                <div class="info-item"><span class="info-label">Destruction</span><span class="info-value">HP reaches
+                        0</span></div>
+            </div>
+        </section>
+
+        <!-- Buildings Grid -->
+        <section>
+            <h2>Building Roster</h2>
+            <div class="buildings-grid" id="buildings-grid">
+                <!-- Rendered by tabletopcommand.js -->
+                <p class="js-fallback">Loading buildings&hellip;</p>
+            </div>
+        </section>
+
+        <!-- Building Chain -->
+        <section>
+            <h2>Build Order Guide</h2>
+            <p>A typical opening build order to get your economy and production running:</p>
+            <div class="build-order">
+                <div class="build-step">
+                    <div class="build-step-num">1</div>
+                    <div class="build-step-info">
+                        <strong>Generator</strong>
+                        <span>2 Ore &mdash; Start generating Energy immediately</span>
+                    </div>
+                </div>
+                <div class="build-step">
+                    <div class="build-step-num">2</div>
+                    <div class="build-step-info">
+                        <strong>Mine</strong>
+                        <span>2 Ore &mdash; Assign a worker for +2 Ore/round</span>
+                    </div>
+                </div>
+                <div class="build-step">
+                    <div class="build-step-num">3</div>
+                    <div class="build-step-info">
+                        <strong>Light Vehicle Factory</strong>
+                        <span>3 Ore, 1 Energy &mdash; Begin producing units</span>
+                    </div>
+                </div>
+                <div class="build-step">
+                    <div class="build-step-num">4</div>
+                    <div class="build-step-info">
+                        <strong>Turret</strong>
+                        <span>2 Ore, 1 Energy &mdash; Protect your workers &amp; buildings</span>
+                    </div>
+                </div>
+                <div class="build-step">
+                    <div class="build-step-num">5</div>
+                    <div class="build-step-info">
+                        <strong>Research Center</strong>
+                        <span>2 Ore, 1 Energy &mdash; Unlock upgrades &amp; Heavy units</span>
+                    </div>
+                </div>
+                <div class="build-step">
+                    <div class="build-step-num">6</div>
+                    <div class="build-step-info">
+                        <strong>Heavy Arms Factory</strong>
+                        <span>4 Ore, 2 Energy &mdash; Field the Vanguard Tank</span>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 1rem;"><a href="rules.html#workers" class="button">Worker Rules</a></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-main">
+
+            <div class="footer-about">
+                <h3 class="footer-heading">TableTop Command</h3>
+                <p>An RTS-inspired tactical board game for 2 players. Build your base, command your army, and destroy
+                    the enemy Headquarters.</p>
+                <p class="footer-version">Rulebook v1.1 &mdash; Designed by Reese Blignaut</p>
+            </div>
+
+            <div class="footer-social">
+                <h3 class="footer-heading">Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com" class="social-icon" title="Instagram" aria-label="Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="images/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com" class="social-icon" title="YouTube" aria-label="YouTube"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="images/youtube.svg" alt="YouTube">
+                    </a>
+                    <a href="https://www.facebook.com" class="social-icon" title="Facebook" aria-label="Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="images/facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rules.html">Rulebook</a></li>
+                    <li><a href="units.html">Units</a></li>
+                    <li><a href="buildings.html">Buildings</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> TableTop Command. All rights reserved. Reese Blignaut</p>
+            <p class="footer-modified">Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/tabletopcommand.js"></script>
+</body>
+
+</html>
