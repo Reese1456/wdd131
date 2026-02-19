@@ -157,7 +157,7 @@ const BUILDINGS = [
         hp: 2,
         functions: '1 AD, 4+ to hit, 6" range. Stationary defensive structure.',
         special: "Protects workers at adjacent buildings. Must be destroyed before workers there can be targeted.",
-        image: "images/turret.png",
+        image: "images/Turret.png",
         icon: "TRT"
     }
 ];
